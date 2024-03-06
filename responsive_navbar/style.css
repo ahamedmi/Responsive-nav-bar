@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Poppins', sans-serif ;
+}
+
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container{
+    background-color: rgba(6, 130, 146, 0.836);
+    background-image: linear-gradient(to right, rgb(10, 10, 120),green,yellow,white,rgb(239, 239, 75),rgb(103, 220, 103),rgb(91, 104, 239));
+    width: 100%;
+    height: 15vh;
+    overflow: hidden;
+    box-shadow: -5px 5px 6px 3px blue;
+}
+
+.nav-container nav{
+    /* background-color: rgb(8, 131, 131); */
+    width: 95%;
+    margin: 0px auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 10vh;
+    height: 10vh;
+    /* display: flex; */
+   /*  justify-content: center; */
+  /*   align-items: center;  */
+  /*   align-self: center; */
+/*   transform: translateY(25%); */
+}
+.logo img {
+   /*  width: 75%; 
+    height: 75%;*/
+    object-fit: cover;
+    /*border-radius: 7.5vh;*/
+    box-shadow: 5px 5px 5px black; 
+  /*   transition: 0.5s; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path:circle(50%);
+}
+
+.logo img:hover{
+    opacity: 0.5;
+    /* width: 100%; 
+    height: 100%;
+    object-fit: cover;   */
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    /* background-color: bisque; */
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+  /*   transition: 0.5s; */
+    font-weight: 900;
+    
+    /* background-image: url("background\ image.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text; */
+}
+
+a{
+    color: transparent;
+    color: black;
+    /* transform: 0.5s; */
+   
+    text-transform: uppercase;
+}
+
+/* a:hover{
+   font-size: 1.5rem;
+   
+} */
+ .nav-links li a:hover, .nav-links li a:focus{
+    color: azure;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgb(51, 54, 54);
+ /*    transition: 1s; */
+    transition: all 0.5s;
+}
+.nav-links li a:active{
+    color: rgb(68, 255, 0);
+}
+
+.nav-links li:hover{
+   /*  scale: 1.5; */
+   transform: scale(1.5);
+   transition: transform 0.6s; 
+}
+
+.arrow{
+    /*   background-color: red; */
+      height: 5vh;
+      width: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; 
+      display: none;
+     }
+  
+  .arrow .line_1,.arrow .line_2,.arrow .line_3{
+      width: 100%;
+      height: 8px;
+      background-color: rgb(255, 255, 255);
+      margin-bottom: 5px;
+      border-radius: 3px;
+ /*      box-shadow: 2px 2px 2px black; */
+      /* display: none; */
+  }
+ 
+  .nav-links{
+    /* position: relative; */
+  
+  }
+
+ @media screen and (max-width:700px) {
+
+    .nav-links{
+        width: 75%;
+    }  
+} 
+@media screen and (max-width:550px) {
+  /*   body{
+        overflow: hidden;
+    } */
+   .nav-links{
+        /* display: none; */
+       /*  position: absolute; */
+        position: fixed;
+        right: 0;
+        top: 15vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 40vh;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: 2px solid azure;
+        border-top: none;
+        box-shadow: 5px 5px 5px black;
+        /* top: -55vh; */
+        /* overflow: hidden; */
+        top: -100vh;
+        transition: all 0.5s;
+    } 
+
+    a{
+        color: azure;
+    }
+
+    .nav-links li{
+       border: 3px solid azure;
+       width: 95%;
+       text-align: center;
+       padding: 10px;
+       margin-bottom: 10px;
+       border-radius: 10px;
+       background-color: rgb(87, 13, 156);
+       box-shadow: 3px 3px 3px azure;
+      
+    }
+    .arrow{
+        display: block;
+    }
+   /*  .arrow .line_1,.arrow .line_2,.arrow .line_3{
+        display: block;
+    } */
+} 
+
+.display{
+    top: 15vh;
+    transition: 0.5s;
+}
+
+.toggle2{
+    display: none;
+}
+
+.toggle1{
+    transform: rotate(45deg) translate(2px,2px);
+    /* box-shadow: 0px 0px 0px black; */
+    transition: transform 0.5s;
+}
+
+.toggle0{
+   transform: rotate(-45deg) translate(-12px,10px);
+ /*   box-shadow: 0px 0px 0px black; */
+ transition: transform 0.5s;
+ 
+}
+
+
+
+
